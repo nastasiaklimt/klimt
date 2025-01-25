@@ -274,36 +274,40 @@
     }
   }
   /* Basic header container */
+/* Position the header at the top over the hero */
 .top-nav {
-  position: absolute; /* or fixed if you want it always visible */
+  position: absolute;
   top: 0;
   width: 100%;
   padding: 1rem 2rem;
   display: flex;
-  justify-content: space-between; /* logo to the left, links to the right */
+  justify-content: space-between;
   align-items: center;
-  z-index: 999; /* ensure it appears on top of the hero */
+  z-index: 999;
 }
 
-/* Logo styling */
+/* Make the logo bigger */
 .logo img {
-  width: 120px; /* Adjust as needed */
+  width: 200px;  /* Adjust as needed */
   height: auto;
 }
 
-/* Instagram link on the right */
+/* Header links container */
 .header-links {
   display: flex;
   gap: 1rem;
 }
 
+/* Instagram link in black */
 .header-links a.instagram-link {
-  color: #fff; /* or a different color if you prefer */
+  color: #000;              /* Black text */
   font-weight: 700;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
+/* Optional hover effect (changes to accent color) */
 .header-links a.instagram-link:hover {
-  color: #ea5a52; /* or another accent color */
+  color: #bdbdbd;  /* or another accent color */
 }
+
