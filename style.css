@@ -279,7 +279,7 @@
   position: absolute;
   top: 0;
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 5rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -288,7 +288,7 @@
 
 /* Make the logo bigger */
 .logo img {
-  width: 200px;  /* Adjust as needed */
+  width: 25%;  /* Adjust as needed */
   height: auto;
 }
 
