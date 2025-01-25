@@ -179,7 +179,7 @@ body {
 .footer {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 2rem;
   align-items: center;
   padding: 1rem 0;
