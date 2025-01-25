@@ -15,8 +15,8 @@
   
   /* Use a vibrant color palette similar to the example site */
   :root {
-    --primary-color: #ea5a52;  /* Adjust to your taste */
-    --secondary-color: #f09a36;
+    --primary-color: #cecece;  /* Adjust to your taste */
+    --secondary-color: #dddddd;
     --bg-color: #f4f4f4;
     --text-color: #111;
   }
@@ -109,7 +109,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(234, 90, 82, 0.9);
+    background-color: rgba(199, 140, 214, 0.9);
     color: #fff;
     opacity: 0;
     display: flex;
