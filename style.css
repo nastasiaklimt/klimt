@@ -6,8 +6,9 @@
   }
   
   body {
-    font-family: 'Montserrat', sans-serif; /* or 'Acumin Pro', if available */
-    font-weight: 300;
+    font-family: "acumin-pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;   
     color: #111;
     line-height: 1.6;
     background-color: #fff;
@@ -279,7 +280,7 @@
   position: absolute;
   top: 0;
   width: 100%;
-  padding: 5rem 2rem;
+  padding: 1rem 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
