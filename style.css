@@ -273,4 +273,37 @@
       flex-direction: column;
     }
   }
-  
+  /* Basic header container */
+.top-nav {
+  position: absolute; /* or fixed if you want it always visible */
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between; /* logo to the left, links to the right */
+  align-items: center;
+  z-index: 999; /* ensure it appears on top of the hero */
+}
+
+/* Logo styling */
+.logo img {
+  width: 120px; /* Adjust as needed */
+  height: auto;
+}
+
+/* Instagram link on the right */
+.header-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.header-links a.instagram-link {
+  color: #fff; /* or a different color if you prefer */
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.header-links a.instagram-link:hover {
+  color: #ea5a52; /* or another accent color */
+}
