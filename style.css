@@ -95,7 +95,7 @@ body {
   padding: 0.75rem 1rem;
   font-size: 0.9rem;
   transition: background-color 0.2s ease;
-  text-transform: lowercase; /* matches the sample style */
+  text-transform: uppercase; /* matches the sample style */
 }
 
 .dropdown-content a:hover {
