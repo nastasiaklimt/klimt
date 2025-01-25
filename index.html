@@ -2,58 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Designer Portfolio</title>
-  <!-- Google Fonts Example -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Telpys Design Font (Typekit) -->
+  <link rel="stylesheet" href="https://use.typekit.net/sje1zgt.css" />
   
-  <!-- Link to your CSS file -->
+  <!-- Main CSS -->
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://use.typekit.net/sje1zgt.css">
 </head>
 <body>
 
-  <!-- ========== Header ========== -->
-  <header class="top-nav">
-    <!-- Logo (bigger) -->
+  <!-- HEADER (Height ~ similar to telpys.design) -->
+  <header class="header">
+    <!-- Logo (left side) -->
     <a href="index.html" class="logo">
-      <img src="images/klimt_logo-01.png" alt="Klimt Logo" />
+      <img src="images/klimt_logo-01.png" alt="Klimt Logo">
     </a>
-  
-    <!-- Instagram Link (text changed to “instagram”) -->
-    <nav class="header-links">
-      <a href="https://instagram.com/nastasia_klimt" target="_blank" class="instagram-link">instagram</a>
-    </nav>
+
+    <!-- Menu Button (top-right) -->
+    <button class="menu-button" aria-label="Open Menu">Menu</button>
+    
+    <!-- POP-UP MENU OVERLAY -->
+    <div class="menu-overlay">
+      <button class="close-button" aria-label="Close Menu">&times;</button>
+      <nav class="overlay-nav">
+        <ul>
+          <!-- Instagram link -->
+          <li><a href="https://instagram.com/nastasia_klimt" target="_blank">instagram</a></li>
+          <!-- “About Me” placeholder link (no actual section since removed) -->
+          <li><a href="#about">about me</a></li>
+          <!-- Scroll link to contact section -->
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  
 
-  <!-- ========== Projects Section ========== -->
+  <!-- PROJECTS SECTION -->
   <section id="projects" class="projects">
-
     <div class="projects-grid">
-      <!-- Project Card 1 -->
+      
+      <!-- Example Project Card 1 -->
       <div class="project-card fade-in-on-scroll">
         <div class="project-image">
           <img src="images/mova-thumbnail.jpg" alt="Project 1 Thumbnail">
         </div>
-        <div class="project-hover">
+        <!-- Hover Overlay with only Project Name (top-left) -->
+        <div class="project-overlay">
           <h3>Project One</h3>
-          <p>Brand Identity for a modern skincare line.</p>
-          <a href="mova.html" class="btn btn-details">View Details</a>
         </div>
       </div>
 
-      <!-- Project Card 2 -->
+      <!-- Example Project Card 2 -->
       <div class="project-card fade-in-on-scroll">
         <div class="project-image">
           <img src="images/project2-thumbnail.jpg" alt="Project 2 Thumbnail">
         </div>
-        <div class="project-hover">
+        <!-- Hover Overlay with only Project Name (top-left) -->
+        <div class="project-overlay">
           <h3>Project Two</h3>
-          <p>Minimalist packaging design for eco-conscious brand.</p>
-          <a href="project2.html" class="btn btn-details">View Details</a>
         </div>
       </div>
 
@@ -61,37 +69,7 @@
     </div>
   </section>
 
-  <!-- ========== About Section ========== -->
-  <section id="about" class="about">
-    <h2 class="section-title">About Me</h2>
-    <div class="about-content fade-in-on-scroll">
-      <div class="about-image">
-        <img src="images/designer-portrait.jpg" alt="Designer Portrait">
-      </div>
-      <div class="about-text">
-        <p>Hello! I’m [Your Name], a passionate graphic designer specializing in brand identity, editorial design, and creative direction. I believe in translating stories into visual experiences that connect with audiences on a deeper level.</p>
-        <p>Over the years, I’ve had the privilege to work on diverse projects that pushed my creative boundaries and expanded my skill set.</p>
-        
-        <div class="timeline">
-          <div class="timeline-item">
-            <span class="year">2020</span>
-            <span class="details">Started my journey with XYZ Agency</span>
-          </div>
-          <div class="timeline-item">
-            <span class="year">2021</span>
-            <span class="details">Launched my first independent brand identity project</span>
-          </div>
-          <div class="timeline-item">
-            <span class="year">2022</span>
-            <span class="details">Collaborated with major fashion brands on editorial designs</span>
-          </div>
-          <!-- Add more timeline items as necessary -->
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== Contact Section ========== -->
+  <!-- CONTACT SECTION (kept at the bottom) -->
   <section id="contact" class="contact">
     <h2 class="section-title">Let’s Work Together</h2>
     <form class="contact-form fade-in-on-scroll">
@@ -111,13 +89,21 @@
     </form>
 
     <div class="contact-info fade-in-on-scroll">
-      <p>Or reach me directly at: <a href="mailto:hello@designer.com">hello@designer.com</a></p>
-      <p>Follow me on <a href="#" target="_blank">Behance</a> / <a href="#" target="_blank">Dribbble</a></p>
-      <p>Connect on <a href="#" target="_blank">Instagram</a> / <a href="#" target="_blank">LinkedIn</a></p>
+      <p>Or reach me directly at: 
+        <a href="mailto:hello@designer.com">hello@designer.com</a>
+      </p>
+      <p>Follow me on 
+        <a href="#" target="_blank">Behance</a> / 
+        <a href="#" target="_blank">Dribbble</a>
+      </p>
+      <p>Connect on 
+        <a href="#" target="_blank">Instagram</a> / 
+        <a href="#" target="_blank">LinkedIn</a>
+      </p>
     </div>
   </section>
 
-  <!-- JavaScript file for scroll animations or parallax (optional) -->
+  <!-- JavaScript for scroll animations & menu toggle (if any) -->
   <script src="script.js"></script>
 </body>
 </html>
