@@ -43,7 +43,7 @@ body {
 .header {
   position: relative;  /* or fixed if you want it always pinned */
   width: 100%;
-  height: 72px;        /* similar to telpys.design header height */
+  height: 200px;        /* similar to telpys.design header height */
   display: flex;
   align-items: center;
   justify-content: space-between;
