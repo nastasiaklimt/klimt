@@ -12,7 +12,6 @@ html, body {
   height: 100%;
 }
 
-/* Use the same font from telpys.design (Typekit) */
 body {
   font-family: "acumin-pro", sans-serif; /* from use.typekit.net */
   font-weight: 400;
@@ -26,7 +25,7 @@ body {
 :root {
   --primary-color: #cecece;
   --secondary-color: #dddddd;
-  --bg-color: #f4f4f4;
+  --bg-color: #ffffff;
   --text-color: #111;
 }
 
@@ -41,88 +40,72 @@ body {
    HEADER
 ------------------------------ */
 .header {
-  position: relative;  /* or fixed if you want it always pinned */
   width: 100%;
-  height: 200px;        /* similar to telpys.design header height */
+  height: 200px;   /* As you requested: same height as reference */
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 2rem;
-  background-color: #fff; /* optional, or make transparent if you prefer */
+  background-color: #fff;
   z-index: 999;
 }
 
-/* Logo on the left */
+/* Logo (left) */
 .logo img {
-  height: 50px; /* Adjust for the best fit */
+  height: 50px;
   width: auto;
 }
 
-/* Menu button on the right */
-.menu-button {
+/* ------------------------------
+   DROPDOWN MENU (top-right)
+------------------------------ */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Menu button */
+.dropbtn {
   background: none;
   border: none;
   font-family: inherit;
   font-size: 1rem;
-  cursor: pointer;
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
-}
-
-/* ------------------------------
-   POP-UP MENU OVERLAY
------------------------------- */
-.menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.9);
-  display: none; /* hidden by default */
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.menu-overlay.active {
-  display: flex;
-}
-
-/* Close button inside overlay */
-.close-button {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: #fff;
   cursor: pointer;
 }
 
-/* Navigation links inside overlay */
-.overlay-nav ul {
-  list-style: none;
-  text-align: center;
+/* Dropdown menu content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;             /* align dropdown to the right edge */
+  background-color: #fff;
+  min-width: 120px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
 }
 
-.overlay-nav li {
-  margin: 1rem 0;
-}
-
-.overlay-nav a {
-  color: #fff;
-  font-size: 1.5rem;
+/* Dropdown links */
+.dropdown-content a {
+  color: #111;
   text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
+  display: block;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+  text-transform: lowercase; /* matches your sample, can remove if not needed */
 }
 
-.overlay-nav a:hover {
-  color: #ccc;
+/* Hover effect on dropdown items */
+.dropdown-content a:hover {
+  background-color: #f2f2f2;
+}
+
+/* Show the dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 /* ------------------------------
@@ -130,11 +113,10 @@ body {
 ------------------------------ */
 .projects {
   background-color: var(--bg-color);
-  padding: 2rem 0; /* removed big margins so thumbnails can go full width */
+  padding: 2rem 0;
 }
 
 .projects-grid {
-  /* Full width, remove max-width */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
@@ -142,12 +124,12 @@ body {
   margin: 0 auto;
 }
 
-/* Each project card without rounded corners */
+/* No curved edges on images */
 .project-card {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  border-radius: 0; /* no curved edges */
+  border-radius: 0;
 }
 
 .project-image img {
@@ -167,7 +149,7 @@ body {
   opacity: 0;
   padding: 1rem;
   display: flex;
-  align-items: flex-start;  /* align text at the top-left */
+  align-items: flex-start;
   justify-content: flex-start;
   transition: opacity 0.3s ease;
 }
@@ -184,7 +166,16 @@ body {
 }
 
 /* ------------------------------
-   CONTACT SECTION
+   ABOUT SECTION (OPTIONAL)
+------------------------------ */
+.about {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+/* ------------------------------
+   CONTACT SECTION (OPTIONAL)
 ------------------------------ */
 .contact {
   background-color: var(--bg-color);
@@ -254,12 +245,8 @@ input, textarea {
 ------------------------------ */
 @media (max-width: 768px) {
   .header {
+    height: 60px; /* reduce if you like */
     padding: 0 1rem;
-    height: 60px; /* reduce slightly for mobile if desired */
-  }
-
-  .menu-button {
-    font-size: 0.9rem;
   }
 
   .projects-grid {
